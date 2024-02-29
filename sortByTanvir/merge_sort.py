@@ -6,7 +6,12 @@ def merge_sort(arr):
     left_half = arr[:mid]
     right_half = arr[mid:]
 
-    return merge(merge_sort(left_half), merge_sort(right_half))
+    # Recursively sort the left and right halves
+    left_half = merge_sort(left_half)
+    right_half = merge_sort(right_half)
+
+    # Merge the sorted halves
+    return merge(left_half, right_half)
 
 def merge(left, right):
     merged = []
@@ -22,13 +27,8 @@ def merge(left, right):
             merged.append(right[right_index])
             right_index += 1
 
-    # If there are remaining elements in left or right half, append them to the result
-    while left_index < len(left):
-        merged.append(left[left_index])
-        left_index += 1
-
-    while right_index < len(right):
-        merged.append(right[right_index])
-        right_index += 1
+    # Append remaining elements from left or right halves
+    merged.extend(left[left_index:])
+    merged.extend(right[right_index:])
 
     return merged

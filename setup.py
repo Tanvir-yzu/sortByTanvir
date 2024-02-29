@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="sortByTanvir",
-    version="0.0.1",
+    version="1.0.3",
     packages=find_packages(),
     install_requires=[],
     entry_points={},
@@ -18,5 +18,5 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3.6",
     ],
-    keywords=["sorting algorithms education","Tanvir-yzu","sortByTanvir","sorting"]
 )
+
