@@ -37,6 +37,14 @@ arr = [12, 11, 13, 5, 6, 7]
 bubble_sort(arr)
 print(arr)  # sorted array
 ```
+Here's an example of how to use the Counting sort algorithm:
+```
+from sortByTanvir import Counting_sort
+
+arr = [12, 11, 13, 5, 6, 7]
+Counting_sort(arr)
+print(arr)  # sorted array
+```
 
 ## Sorting Algorithms
 Here's a brief description of each sorting algorithm:
